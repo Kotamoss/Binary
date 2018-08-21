@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Binary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="Binary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                 <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="Enter a Value..." textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wK-9v-6QC">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="Enter a Value..." textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wK-9v-6QC">
                                 <rect key="frame" x="10" y="100" width="355" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="2bz-Br-zLo"/>
@@ -55,6 +55,9 @@
                                                 <state key="normal" title="BINARY">
                                                     <color key="titleColor" red="0.1740759835" green="0.1740759835" blue="0.1740759835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="binaryBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grH-Xv-7RK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEu-Je-DzC">
                                                 <rect key="frame" x="182.5" y="0.0" width="172.5" height="45"/>
@@ -63,6 +66,9 @@
                                                 <state key="normal" title="DECIMAL">
                                                     <color key="titleColor" red="0.1740759835" green="0.1740759835" blue="0.1740759835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="decimalBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQD-L1-9YM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -86,6 +92,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="binaryBtn" destination="6fi-bs-Ymg" id="MnH-XA-d3d"/>
+                        <outlet property="decimalBtn" destination="kEu-Je-DzC" id="WKJ-rw-CJh"/>
+                        <outlet property="valueTextField" destination="9wK-9v-6QC" id="00u-9m-aRZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
